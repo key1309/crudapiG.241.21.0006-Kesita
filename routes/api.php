@@ -33,4 +33,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('mahasiswa/update2', [MahasiswaController::class, 'update']);
     Route::get('mahasiswa/read2/{nim}', [MahasiswaController::class, 'show']);
     Route::delete('mahasiswa/delete2/{nim}', [MahasiswaController::class, 'destroy']);
+
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });
